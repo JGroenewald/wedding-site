@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8B7355;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #8B7355;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8dfd6 100%);
+    padding: 6rem 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.couple-names {
+    font-size: 3.5rem;
+    color: #8B7355;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.wedding-date {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.wedding-location {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Intro Section */
+.intro {
+    padding: 4rem 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #8B7355;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Quick Links Grid */
+.quick-links {
+    padding: 4rem 20px;
+    background: #fafafa;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.link-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.link-card h3 {
+    color: #8B7355;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.link-card p {
+    color: #666;
+}
+
+/* Page Content */
+.page-header {
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8dfd6 100%);
+    padding: 4rem 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: #8B7355;
+}
+
+.page-content {
+    padding: 4rem 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-content h2 {
+    color: #8B7355;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page-content p, .page-content li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.page-content ul {
+    margin-left: 2rem;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.photo-item {
+    aspect-ratio: 4/3;
+    background: #e8dfd6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8B7355;
+}
+
+.btn-submit {
+    background: #8B7355;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #6d5940;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .couple-names {
+        font-size: 2.5rem;
+    }
+    
+    .wedding-date {
+        font-size: 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
