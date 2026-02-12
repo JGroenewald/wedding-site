@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liedjie Versoeke - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .google-form-link {
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+        .google-form-link a {
+            display: inline-block;
+            background-color: #8b7355;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+        }
+        .google-form-link a:hover {
+            background-color: #6f5a43;
+            transform: translateY(-2px);
+        }
+        .google-form-link p {
+            margin-top: 1rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -32,34 +60,13 @@
                 <p>[Voeg 'n musiek-geïnspireerde foto hier in]</p>
             </div>
 
-            <form action="https://formspree.io/f/xjgeykby" method="POST" class="song-request-form">
-                <div class="form-group">
-                    <label for="name">Jou Naam:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="song1">Liedjie 1:</label>
-                    <input type="text" id="song1" name="song1" placeholder="Liedjie Titel - Kunstenaar" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="song2">Liedjie 2:</label>
-                    <input type="text" id="song2" name="song2" placeholder="Liedjie Titel - Kunstenaar">
-                </div>
-
-                <div class="form-group">
-                    <label for="song3">Liedjie 3:</label>
-                    <input type="text" id="song3" name="song3" placeholder="Liedjie Titel - Kunstenaar">
-                </div>
-
-                <div class="form-group">
-                    <label for="comments">Addisionele Kommentaar:</label>
-                    <textarea id="comments" name="comments" rows="4" placeholder="Enige spesiale versoeke of liedjies wat jy NIE wil hoor nie..."></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Dien Liedjie Versoeke In</button>
-            </form>
+            <div class="google-form-link">
+                <!-- VERVANG DIE URL HIERONDER MET JOU GOOGLE FORM SKAKEL -->
+                <a href="https://forms.google.com/YOUR_FORM_LINK_HERE" target="_blank">
+                    🎵 Dien Jou Liedjies In
+                </a>
+                <p>Klik die knoppie om jou gunsteling liedjies met ons te deel!</p>
+            </div>
 
             <div class="photo-placeholder">
                 <p>[Voeg nog 'n foto hier in]</p>
