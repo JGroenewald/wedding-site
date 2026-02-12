@@ -8,201 +8,161 @@ body {
     font-family: 'Georgia', serif;
     line-height: 1.6;
     color: #333;
+    background-color: #faf8f5;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigation */
-.navbar {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+nav {
+    background-color: #8b7355;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #8B7355;
-    text-decoration: none;
-}
-
-.nav-menu {
-    display: flex;
+nav ul {
     list-style: none;
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.nav-menu a {
-    color: #555;
+nav a {
+    color: #fff;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-menu a:hover {
-    color: #8B7355;
+nav a:hover {
+    color: #f4e4d7;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #f5f0eb 0%, #e8dfd6 100%);
-    padding: 6rem 20px;
+header {
     text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #d4b5a0 0%, #8b7355 100%);
+    color: white;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.couple-names {
-    font-size: 3.5rem;
-    color: #8B7355;
-    margin-bottom: 1rem;
-    font-weight: normal;
-}
-
-.wedding-date {
-    font-size: 1.8rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-.wedding-location {
-    font-size: 1.2rem;
-    color: #777;
-}
-
-/* Intro Section */
-.intro {
-    padding: 4rem 20px;
-    text-align: center;
-    background: #fff;
-}
-
-.intro h2 {
+header h1 {
     font-size: 2.5rem;
-    color: #8B7355;
-    margin-bottom: 1rem;
-}
-
-.intro p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Quick Links Grid */
-.quick-links {
-    padding: 4rem 20px;
-    background: #fafafa;
-}
-
-.links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.link-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.link-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.link-card h3 {
-    color: #8B7355;
     margin-bottom: 0.5rem;
+    font-family: 'Palatino', 'Book Antiqua', serif;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    margin-bottom: 3rem;
+}
+
+.content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #8b7355;
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    font-family: 'Palatino', 'Book Antiqua', serif;
+}
+
+h3 {
+    color: #a68968;
+    margin: 1.5rem 0 0.5rem 0;
     font-size: 1.5rem;
 }
 
-.link-card p {
-    color: #666;
-}
-
-/* Page Content */
-.page-header {
-    background: linear-gradient(135deg, #f5f0eb 0%, #e8dfd6 100%);
-    padding: 4rem 20px;
-    text-align: center;
-}
-
-.page-header h1 {
-    font-size: 3rem;
-    color: #8B7355;
-}
-
-.page-content {
-    padding: 4rem 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.page-content h2 {
-    color: #8B7355;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.page-content p, .page-content li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.page-content ul {
-    margin-left: 2rem;
-}
-
-/* Photo Gallery */
-.photo-gallery {
+.info-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     margin: 2rem 0;
 }
 
-.photo-item {
-    aspect-ratio: 4/3;
-    background: #e8dfd6;
+.card {
+    background: #f4e4d7;
+    padding: 1.5rem;
     border-radius: 8px;
-    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card h3 {
+    color: #8b7355;
+    margin-top: 0;
 }
 
-/* Form Styles */
+.photo-placeholder {
+    background: linear-gradient(135deg, #e8ddd0 0%, #d4b5a0 100%);
+    border: 2px dashed #8b7355;
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: #8b7355;
+    font-style: italic;
+}
+
+.accommodation-option,
+.activity,
+.faq-item,
+.timeline-item {
+    background: #faf8f5;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid #8b7355;
+}
+
+.accommodation-option h3,
+.activity h3,
+.faq-item h3 {
+    margin-top: 0;
+    color: #8b7355;
+}
+
+.info-box {
+    background: #f4e4d7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border: 2px solid #d4b5a0;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: #8b7355;
+}
+
+.info-box ul {
+    margin-left: 1.5rem;
+}
+
+.info-box ul li {
+    margin: 0.5rem 0;
+}
+
+/* Song Request Form Styles */
+.song-request-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -210,64 +170,107 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #555;
-    font-weight: bold;
+    color: #8b7355;
+    font-weight: 500;
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
+    padding: 0.75rem;
+    border: 2px solid #d4b5a0;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
     font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8B7355;
+    border-color: #8b7355;
 }
 
-.btn-submit {
-    background: #8B7355;
-    color: #fff;
+.submit-btn {
+    background-color: #8b7355;
+    color: white;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1.1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
+    width: 100%;
 }
 
-.btn-submit:hover {
-    background: #6d5940;
+.submit-btn:hover {
+    background-color: #6f5a43;
 }
 
-/* Footer */
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-time {
+    font-weight: bold;
+    color: #8b7355;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.timeline-content {
+    background: #faf8f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #8b7355;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #8b7355;
+}
+
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
     padding: 2rem;
+    background-color: #8b7355;
+    color: white;
+    margin-top: 3rem;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-menu {
-        gap: 1rem;
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
-    .couple-names {
-        font-size: 2.5rem;
-    }
-    
-    .wedding-date {
-        font-size: 1.5rem;
-    }
-    
-    .page-header h1 {
+    header h1 {
         font-size: 2rem;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .timeline-time {
+        text-align: left;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
     }
 }
