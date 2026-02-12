@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Ons Troue</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .important-notice {
+            background: #fdf6f0;
+            border-left: 4px solid var(--color-primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .important-notice h3 {
+            color: var(--color-primary);
+            margin: 0 0 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .important-notice p {
+            margin-bottom: 0.6rem;
+            color: var(--color-text);
+        }
+
+        .important-notice p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cost-highlight {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.3rem 0.85rem;
+            border-radius: 4px;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .rules-list {
+            margin: 1rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .rules-list li {
+            padding: 0.6rem 0 0.6rem 1.75rem;
+            position: relative;
+            color: var(--color-text);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .rules-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rules-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        .google-form-container {
+            margin: 2rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .google-form-container iframe {
+            width: 100%;
+            min-height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .form-link-fallback {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--color-bg);
+            border-radius: var(--radius);
+        }
+
+        .form-link-fallback a {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 2px;
+            transition: border-color 0.3s;
+        }
+
+        .form-link-fallback a:hover {
+            border-bottom-color: var(--color-primary);
+        }
+
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+            margin: 2.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Tuis</a></li>
+            <li><a href="accommodation.html">Akkommodasie</a></li>
+            <li><a href="activities.html">Aktiwiteite</a></li>
+            <li><a href="faq.html">Gereelde Vrae</a></li>
+            <li><a href="song-requests.html">Liedjie Versoeke</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="rsvp.html" class="active">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>RSVP</h1>
+        <p class="subtitle">Bevestig asseblief jou bywoning &amp; akkommodasie</p>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2 style="text-align: center; margin-top: 0;">Troue &amp; Akkommodasie RSVP</h2>
+            <p style="text-align: center; color: var(--color-text-light);">
+                Antwoord asseblief voor <strong>[Datum]</strong> sodat ons finaal kan beplan.
+            </p>
+
+            <hr class="section-divider">
+
+            <!-- Accommodation & Cost Info -->
+            <h2>Akkommodasie Besonderhede</h2>
+            <p>Alle gaste wat op die terrein oorbly, bly vir die volle naweek. Hieronder is die belangrike besonderhede rakende verblyf en koste.</p>
+
+            <div class="important-notice">
+                <h3>Beraamde Koste</h3>
+                <p>Die koste vir die naweek is <span class="cost-highlight">R1 750 – R1 900</span> per persoon.</p>
+                <p>Die presiese bedrag sal persoonlik aan jou gekommunikeer word, aangesien dit afhang van die spesifieke akkommodasie-eenheid waar jy ingedeel word.</p>
+            </div>
+
+            <div class="important-notice">
+                <h3>Belangrike Reëls</h3>
+                <ul class="rules-list">
+                    <li><strong>Beide aande is verpligtend</strong> — alle gaste wat op die terrein bly, moet vir albei nagte bespreek.</li>
+                    <li><strong>Ouer kinders</strong> wat op beddens slaap, betaal ook die volle tarief per persoon.</li>
+                    <li><strong>Geen ekstra gaste</strong> — gaste mag nie addisionele persone saambring nie, tensy dit spesifiek op jou uitnodiging aangedui is.</li>
+                </ul>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- RSVP Form -->
+            <h2 style="text-align: center;">Vul Asseblief die Vorm In</h2>
+            <p style="text-align: center; color: var(--color-text-light);">
+                Die vorm hieronder dek beide jou bywoning by die troue én jou akkommodasie bespreking.
+            </p>
+
+            <div class="google-form-container">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfx6WUWUb5yPV-NPMOuNAoPGYWRwgVZjxfn2NmaDphMH67MAw/viewform?embedded=true"
+                    title="RSVP Vorm"
+                    loading="lazy">
+                    Laai tans...
+                </iframe>
+            </div>
+
+            <div class="form-link-fallback">
+                <p>Kan jy nie die vorm sien nie? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx6WUWUb5yPV-NPMOuNAoPGYWRwgVZjxfn2NmaDphMH67MAw/viewform?usp=header" target="_blank" rel="noopener">Klik hier om dit in 'n nuwe venster oop te maak</a>.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <p style="text-align: center; color: var(--color-text-light); font-size: 0.95rem;">
+                <em>As jou planne verander, kontak ons asseblief so gou as moontlik by<br>
+                <strong>[jou e-pos of telefoonnommer]</strong></em>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ons Troue. Alle regte voorbehou.</p>
+    </footer>
+</body>
+</html>

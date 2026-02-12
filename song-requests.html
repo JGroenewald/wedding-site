@@ -5,34 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liedjie Versoeke - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .google-form-link {
-            text-align: center;
-            margin: 2.5rem 0;
-        }
-        .google-form-link a {
-            display: inline-block;
-            background-color: #8b7355;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
-        }
-        .google-form-link a:hover {
-            background-color: #6f5a43;
-            transform: translateY(-2px);
-        }
-        .google-form-link p {
-            margin-top: 1rem;
-            color: #999;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -41,42 +13,64 @@
             <li><a href="accommodation.html">Akkommodasie</a></li>
             <li><a href="activities.html">Aktiwiteite</a></li>
             <li><a href="faq.html">Gereelde Vrae</a></li>
-            <li><a href="song-requests.html">Liedjie Versoeke</a></li>
+            <li><a href="song-requests.html" class="active">Liedjie Versoeke</a></li>
             <li><a href="program.html">Program</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
         </ul>
     </nav>
 
     <header>
         <h1>Liedjie Versoeke</h1>
-        <p class="subtitle">Help ons om die perfekte speellys te skep!</p>
+        <p class="subtitle">Help ons om die perfekte snitlys te maak!</p>
     </header>
 
     <main>
         <section class="content">
-            <h2>Deel Jou Gunsteling Liedjies</h2>
-            <p>Ons wil hê die dansvloer moet vol wees die hele nag! Deel jou gunsteling dans liedjies met ons en ons sal probeer om soveel as moontlik in te sluit. Of dit nou 'n klassieke treffer is of 'n moderne jam, ons wil almal hoor!</p>
+            <h2>Versoek Jou Gunsteling Liedjies</h2>
+            <p>Ons wil hê die dansvloer moet vol wees! Stel asseblief jou gunsteling liedjies voor wat jy by ons troue wil hoor. Ons sal ons bes doen om soveel versoeke as moontlik in te sluit.</p>
 
             <div class="photo-placeholder">
-                <p>[Voeg 'n musiek-geïnspireerde foto hier in]</p>
+                <p>[Voeg 'n foto van musiek/dans hier in]</p>
             </div>
 
-            <div class="google-form-link">
-                <!-- VERVANG DIE URL HIERONDER MET JOU GOOGLE FORM SKAKEL -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScYgS-iFFOJgTu5z5DdzAAlR3xPshjt5gdLrAdRAejSt9XRvw/viewform?usp=preview" target="_blank">
-                    🎵 Dien Jou Liedjies In
-                </a>
-                <p>Klik die knoppie om jou gunsteling liedjies met ons te deel!</p>
-            </div>
+            <!-- Verander die Formspree URL na jou eie -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Jou Naam</label>
+                    <input type="text" id="name" name="name" required placeholder="Voer jou naam in">
+                </div>
 
-            <div class="photo-placeholder">
-                <p>[Voeg nog 'n foto hier in]</p>
-            </div>
+                <div class="form-group">
+                    <label for="song1">Liedjie 1</label>
+                    <input type="text" id="song1" name="song1" required placeholder="Kunstenaar — Liedjie naam">
+                </div>
 
+                <div class="form-group">
+                    <label for="song2">Liedjie 2</label>
+                    <input type="text" id="song2" name="song2" placeholder="Kunstenaar — Liedjie naam">
+                </div>
+
+                <div class="form-group">
+                    <label for="song3">Liedjie 3</label>
+                    <input type="text" id="song3" name="song3" placeholder="Kunstenaar — Liedjie naam">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Enige spesiale versoeke of boodskappe</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Opsioneel — enige spesiale versoeke"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Dien Versoeke In</button>
+            </form>
+
+            <p style="margin-top: 1.5rem; color: var(--color-text-light); font-size: 0.9rem; text-align: center;">
+                <em>Nota: Registreer by <a href="https://formspree.io" target="_blank" style="color: var(--color-primary);">formspree.io</a> (gratis) en vervang "YOUR_FORM_ID" met jou eie form ID om hierdie vorm te laat werk.</em>
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ons Troue. Alle regte voorbehou.</p>
+        <p>&copy; 2026 Ons Troue. Alle regte voorbehou.</p>
     </footer>
 </body>
 </html>
