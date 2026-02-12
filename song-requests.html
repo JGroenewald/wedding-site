@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liedjie Versoeke - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .google-form-container {
+            margin: 2rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .google-form-container iframe {
+            width: 100%;
+            min-height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .form-link-fallback {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--color-bg);
+            border-radius: var(--radius);
+        }
+
+        .form-link-fallback a {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 2px;
+            transition: border-color 0.3s;
+        }
+
+        .form-link-fallback a:hover {
+            border-bottom-color: var(--color-primary);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -33,39 +69,18 @@
                 <p>[Voeg 'n foto van musiek/dans hier in]</p>
             </div>
 
-            <!-- Verander die Formspree URL na jou eie -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Jou Naam</label>
-                    <input type="text" id="name" name="name" required placeholder="Voer jou naam in">
-                </div>
+            <div class="google-form-container">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScYgS-iFFOJgTu5z5DdzAAlR3xPshjt5gdLrAdRAejSt9XRvw/viewform?embedded=true"
+                    title="Liedjie Versoeke Vorm"
+                    loading="lazy">
+                    Laai tans...
+                </iframe>
+            </div>
 
-                <div class="form-group">
-                    <label for="song1">Liedjie 1</label>
-                    <input type="text" id="song1" name="song1" required placeholder="Kunstenaar — Liedjie naam">
-                </div>
-
-                <div class="form-group">
-                    <label for="song2">Liedjie 2</label>
-                    <input type="text" id="song2" name="song2" placeholder="Kunstenaar — Liedjie naam">
-                </div>
-
-                <div class="form-group">
-                    <label for="song3">Liedjie 3</label>
-                    <input type="text" id="song3" name="song3" placeholder="Kunstenaar — Liedjie naam">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Enige spesiale versoeke of boodskappe</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Opsioneel — enige spesiale versoeke"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Dien Versoeke In</button>
-            </form>
-
-            <p style="margin-top: 1.5rem; color: var(--color-text-light); font-size: 0.9rem; text-align: center;">
-                <em>Nota: Registreer by <a href="https://formspree.io" target="_blank" style="color: var(--color-primary);">formspree.io</a> (gratis) en vervang "YOUR_FORM_ID" met jou eie form ID om hierdie vorm te laat werk.</em>
-            </p>
+            <div class="form-link-fallback">
+                <p>Kan jy nie die vorm sien nie? <a href="https://docs.google.com/forms/d/e/1FAIpQLScYgS-iFFOJgTu5z5DdzAAlR3xPshjt5gdLrAdRAejSt9XRvw/viewform?usp=header" target="_blank" rel="noopener">Klik hier om dit in 'n nuwe venster oop te maak</a>.</p>
+            </div>
         </section>
     </main>
 
