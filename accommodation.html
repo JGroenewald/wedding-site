@@ -5,6 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akkommodasie - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Accommodation-specific styles */
+        .accommodation-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .badge-onsite {
+            background-color: #d4edda;
+            color: #2d5a3d;
+        }
+
+        .badge-offsite {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .house-card {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #8b7355;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease;
+        }
+
+        .house-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .house-card.offsite {
+            border-left-color: #c9a84c;
+        }
+
+        .house-name {
+            font-size: 1.3rem;
+            color: #8b7355;
+            margin: 0 0 0.3rem 0;
+            font-weight: 700;
+        }
+
+        .house-description {
+            color: #999;
+            font-size: 0.9rem;
+            margin: 0 0 1rem 0;
+            font-style: italic;
+        }
+
+        .guest-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .guest-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e0d8ce;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .guest-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guest-list li::before {
+            content: "✦ ";
+            color: #8b7355;
+            margin-right: 0.3rem;
+        }
+
+        /* Site Map Section */
+        .sitemap-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .sitemap-placeholder {
+            background: #f0ebe4;
+            border: 3px dashed #c9b99a;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin: 1.5rem 0;
+            color: #8b7355;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sitemap-placeholder p {
+            margin: 0.5rem 0;
+        }
+
+        .sitemap-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Search/filter */
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 2rem auto;
+            display: block;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #d4ccc0;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            background: #faf8f5;
+            color: #555;
+            box-sizing: border-box;
+        }
+
+        .search-box input:focus {
+            border-color: #8b7355;
+        }
+
+        .search-box input::placeholder {
+            color: #b5a99a;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #999;
+            padding: 2rem;
+            display: none;
+        }
+
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #8b7355;
+        }
+
+        @media (max-width: 768px) {
+            .house-card {
+                padding: 1.2rem;
+            }
+            .house-name {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -20,76 +182,134 @@
 
     <header>
         <h1>Akkommodasie</h1>
-        <p class="subtitle">Waar om te bly tydens ons troue naweek</p>
+        <p class="subtitle">Waar bly jy tydens die troue naweek</p>
     </header>
 
     <main>
         <section class="content">
-            <h2>Aanbevole Akkommodasie</h2>
-            <p>Ons het 'n paar wonderlike opsies vir julle uitgekies, elkeen binne maklike ry-afstand van die troue lokaal. Bespreek asseblief vroegtydig aangesien ons troue in 'n besige tyd val!</p>
+
+            <p>Meeste van ons gaste bly op die terrein self! Soek jou naam hieronder om te sien waar jy sal slaap. As jy enige vrae het, kontak ons gerus.</p>
+
+            <!-- Search box -->
+            <div class="search-box">
+                <input type="text" id="guestSearch" placeholder="🔍 Soek jou naam hier...">
+            </div>
+
+            <div id="no-results" class="no-results">
+                <p>Geen resultate gevind nie. Probeer weer of kontak ons.</p>
+            </div>
+
+            <!-- Onsite Accommodation - populated by JS -->
+            <div class="accommodation-section" id="onsite-section">
+                <span class="section-badge badge-onsite">✓ Op die Terrein</span>
+                <h2>Verblyf Op Die Terrein</h2>
+                <div id="onsite-container">
+                    <div class="loading">Laai akkommodasie data...</div>
+                </div>
+            </div>
+
+            <!-- Site Map -->
+            <div class="sitemap-section">
+                <h2>Terreinkaart / Site Map</h2>
+                <p>Gebruik hierdie kaart om jou verblyf en ander belangrike plekke op die terrein te vind.</p>
+                <div class="sitemap-placeholder">
+                    <div class="icon">🗺️</div>
+                    <p><strong>[Voeg jou terreinkaart hier in]</strong></p>
+                    <p style="font-size: 0.85rem;">Vervang hierdie blok met:<br>
+                    <code>&lt;img src="images/sitemap.jpg" alt="Terreinkaart"&gt;</code></p>
+                </div>
+            </div>
+
+            <!-- Offsite Accommodation - populated by JS -->
+            <div class="accommodation-section" id="offsite-section">
+                <span class="section-badge badge-offsite">↗ Buite Die Terrein</span>
+                <h2>Verblyf Buite Die Terrein</h2>
+                <div id="offsite-container">
+                    <div class="loading">Laai akkommodasie data...</div>
+                </div>
+            </div>
 
             <div class="photo-placeholder">
-                <p>[Voeg 'n foto van akkommodasie hier in]</p>
+                <p>[Voeg 'n foto van die terrein hier in]</p>
             </div>
 
-            <div class="accommodation-option">
-                <h3>Hotel Opsie 1: [Hotel Naam]</h3>
-                <p><strong>Afstand:</strong> [X km] van die lokaal</p>
-                <p><strong>Prys Reeks:</strong> R[XXX] - R[XXX] per nag</p>
-                <p><strong>Fasiliteite:</strong> Swembad, Gratis WiFi, Parkering, Ontbyt ingesluit</p>
-                <p><strong>Kontak:</strong> [Telefoonnommer] | <a href="[website]">[website]</a></p>
-                <p><strong>Spesiale Nota:</strong> Noem ons troue wanneer jy bespreek vir moontlike groep tariewe!</p>
-            </div>
-
-            <div class="photo-placeholder">
-                <p>[Voeg 'n foto van akkommodasie hier in]</p>
-            </div>
-
-            <div class="accommodation-option">
-                <h3>Hotel Opsie 2: [Hotel Naam]</h3>
-                <p><strong>Afstand:</strong> [X km] van die lokaal</p>
-                <p><strong>Prys Reeks:</strong> R[XXX] - R[XXX] per nag</p>
-                <p><strong>Fasiliteite:</strong> Restaurant, Gholf baan naby, Spa, Gratis WiFi</p>
-                <p><strong>Kontak:</strong> [Telefoonnommer] | <a href="[website]">[website]</a></p>
-                <p><strong>Spesiale Nota:</strong> Perfek vir gesinne met kinders.</p>
-            </div>
-
-            <div class="photo-placeholder">
-                <p>[Voeg 'n foto van akkommodasie hier in]</p>
-            </div>
-
-            <div class="accommodation-option">
-                <h3>Budget Vriendelike: [Naam]</h3>
-                <p><strong>Afstand:</strong> [X km] van die lokaal</p>
-                <p><strong>Prys Reeks:</strong> R[XXX] - R[XXX] per nag</p>
-                <p><strong>Fasiliteite:</strong> Skoon kamers, Gratis parkering, Ontbyt beskikbaar</p>
-                <p><strong>Kontak:</strong> [Telefoonnommer] | <a href="[website]">[website]</a></p>
-                <p><strong>Spesiale Nota:</strong> Uitstekende waarde vir geld!</p>
-            </div>
-
-            <div class="photo-placeholder">
-                <p>[Voeg 'n foto van akkommodasie hier in]</p>
-            </div>
-
-            <div class="accommodation-option">
-                <h3>Gastehuise & B&B's</h3>
-                <p>Daar is verskeie sjarmante gastehuise en B&B's in die omgewing wat 'n meer persoonlike ervaring bied. Kontak ons gerus vir aanbevelings!</p>
-            </div>
-
-            <div class="info-box">
-                <h3>Belangrike Wenke</h3>
-                <ul>
-                    <li>Bespreek so gou as moontlik - plekke raak vinnig vol!</li>
-                    <li>Oorweeg om vroeg aan te kom of later te vertrek om die area te verken</li>
-                    <li>As jy vervoer vanaf jou akkommodasie na die lokaal nodig het, laat ons weet</li>
-                    <li>Al die opsies hierbo het veilige parkering beskikbaar</li>
-                </ul>
-            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Ons Troue. Alle regte voorbehou.</p>
     </footer>
+
+    <script>
+        // Load accommodation data from JSON file
+        fetch('accommodation-data.json')
+            .then(response => response.json())
+            .then(data => {
+                renderAccommodation(data);
+                setupSearch(data);
+            })
+            .catch(error => {
+                console.error('Kon nie data laai nie:', error);
+                document.getElementById('onsite-container').innerHTML = '<p>Kon nie akkommodasie data laai nie. Probeer later weer.</p>';
+                document.getElementById('offsite-container').innerHTML = '';
+            });
+
+        function renderAccommodation(data) {
+            // Render onsite
+            const onsiteContainer = document.getElementById('onsite-container');
+            onsiteContainer.innerHTML = data.onsite.map(house => createHouseCard(house, 'onsite')).join('');
+
+            // Render offsite
+            const offsiteContainer = document.getElementById('offsite-container');
+            offsiteContainer.innerHTML = data.offsite.map(house => createHouseCard(house, 'offsite')).join('');
+        }
+
+        function createHouseCard(house, type) {
+            const guestItems = house.guests.map(g => `<li>${g}</li>`).join('');
+            return `
+                <div class="house-card ${type === 'offsite' ? 'offsite' : ''}" data-guests="${house.guests.join(',').toLowerCase()}">
+                    <h3 class="house-name">${house.name}</h3>
+                    <p class="house-description">${house.description}</p>
+                    <ul class="guest-list">
+                        ${guestItems}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function setupSearch(data) {
+            const searchInput = document.getElementById('guestSearch');
+            const noResults = document.getElementById('no-results');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                const cards = document.querySelectorAll('.house-card');
+                let anyVisible = false;
+
+                cards.forEach(card => {
+                    const guests = card.getAttribute('data-guests');
+                    const houseName = card.querySelector('.house-name').textContent.toLowerCase();
+
+                    if (query === '' || guests.includes(query) || houseName.includes(query)) {
+                        card.style.display = 'block';
+                        anyVisible = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show/hide section headers based on visible cards
+                const onsiteCards = document.querySelectorAll('#onsite-container .house-card[style="display: block"], #onsite-container .house-card:not([style])');
+                const offsiteCards = document.querySelectorAll('#offsite-container .house-card[style="display: block"], #offsite-container .house-card:not([style])');
+
+                document.getElementById('onsite-section').style.display = 
+                    (query === '' || document.querySelectorAll('#onsite-container .house-card:not([style*="none"])').length > 0) ? 'block' : 'none';
+                document.getElementById('offsite-section').style.display = 
+                    (query === '' || document.querySelectorAll('#offsite-container .house-card:not([style*="none"])').length > 0) ? 'block' : 'none';
+
+                noResults.style.display = (!anyVisible && query !== '') ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>

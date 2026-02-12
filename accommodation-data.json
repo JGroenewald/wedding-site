@@ -1,0 +1,55 @@
+{
+  "onsite": [
+    {
+      "name": "Hoofeenhuis / Main House",
+      "description": "Die groot huis op die terrein",
+      "guests": [
+        "Gaste Naam 1",
+        "Gaste Naam 2",
+        "Gaste Naam 3 & Naam 4"
+      ]
+    },
+    {
+      "name": "Bungalow 1 – Protea",
+      "description": "Langs die dam",
+      "guests": [
+        "Gaste Naam 5 & Naam 6",
+        "Gaste Naam 7"
+      ]
+    },
+    {
+      "name": "Bungalow 2 – Fynbos",
+      "description": "By die tuin",
+      "guests": [
+        "Gaste Naam 8",
+        "Gaste Naam 9 & Naam 10"
+      ]
+    },
+    {
+      "name": "Cottage – Rooibos",
+      "description": "Agter die swembad",
+      "guests": [
+        "Gaste Naam 11 & Naam 12",
+        "Gaste Naam 13"
+      ]
+    }
+  ],
+  "offsite": [
+    {
+      "name": "Familie",
+      "description": "Bly by familie in die omgewing",
+      "guests": [
+        "Gaste Naam 14",
+        "Gaste Naam 15 & Naam 16"
+      ]
+    },
+    {
+      "name": "Soek Self / Find Your Own",
+      "description": "Bespreek jou eie akkommodasie",
+      "guests": [
+        "Gaste Naam 17",
+        "Gaste Naam 18"
+      ]
+    }
+  ]
+}
