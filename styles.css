@@ -71,7 +71,7 @@ nav a:hover, nav a.active {
 /* ── Header ── */
 header {
     text-align: center;
-    padding: 4rem 1.5rem 3.5rem;
+    padding: 2.5rem 1.5rem 2rem;
     background: linear-gradient(145deg, var(--color-accent) 0%, var(--color-primary) 100%);
     color: white;
     position: relative;
@@ -106,19 +106,19 @@ header h1 {
 main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .content {
     background: var(--color-white);
-    padding: 2.5rem;
+    padding: 1.75rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
 }
 
 h2 {
     color: var(--color-primary);
-    margin: 2.5rem 0 1rem;
+    margin: 1.75rem 0 0.75rem;
     font-size: 2rem;
     font-family: var(--font-display);
     font-weight: 400;
@@ -174,9 +174,9 @@ p {
     background: var(--color-bg-warm);
     border: 2px dashed var(--color-accent);
     border-radius: var(--radius);
-    padding: 4rem 2rem;
+    padding: 1rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     color: var(--color-primary);
     font-style: italic;
 }
@@ -413,10 +413,10 @@ p {
 /* ── Footer ── */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: var(--color-primary);
     color: rgba(255,255,255,0.8);
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-family: var(--font-display);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -434,11 +434,11 @@ footer {
     }
 
     header {
-        padding: 3rem 1rem 2.5rem;
+        padding: 2rem 1rem 1.5rem;
     }
 
     .content {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     h2 {
