@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .day-heading {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1rem 1.5rem;
+            margin: 2.5rem 0 1.5rem;
+            text-align: center;
+        }
+        .day-heading h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .day-heading p {
+            margin: 0.25rem 0 0;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+        .byo-notice {
+            background: #fff8e7;
+            border: 1px solid var(--color-accent);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            color: var(--color-text);
+        }
+        .byo-notice strong {
+            color: var(--color-primary);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -21,24 +52,58 @@
 
     <header>
         <h1>Troue Program</h1>
-        <p class="subtitle">Die dag se verloop</p>
+        <p class="subtitle">Die naweek se verloop</p>
     </header>
 
     <main>
         <section class="content">
-            <h2>Ons Groot Dag</h2>
-            <p>Hier is die volledige program vir ons troue dag. Ons kan nie wag om hierdie spesiale oomblikke saam met julle te deel nie!</p>
+            <h2>Ons Groot Naweek</h2>
+            <p>Hier is die volledige program vir ons troue-naweek. Ons kan nie wag om hierdie spesiale oomblikke saam met julle te deel nie!</p>
+
+            <div class="byo-notice">
+                <strong>Bring Jou Eie Drank (BYO):</strong> Daar is nie 'n kroeg op die terrein nie. Ons voorsien tafelwyn, 'n biervat en een of twee gin-vate, maar bring asseblief jou eie drank vir die res van die naweek. Daar is 'n kombuis met glase en alles wat jy nodig het.
+            </div>
 
             <div class="photo-placeholder">
                 <p>[Voeg 'n foto van die venue hier in]</p>
+            </div>
+
+            <!-- FRIDAY -->
+            <div class="day-heading">
+                <h2>Vrydag, 4 September</h2>
+                <p>Welkom &amp; Meet-and-Greet</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00+</div>
+                    <div class="timeline-content">
+                        <h3>Gaste Arriveer &amp; Intrek</h3>
+                        <p>Welkom by Pat Busch Mountain Reserve! Trek in by julle akkommodasie en maak julself tuis.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Vrydagaand-Braai</h3>
+                        <p>Sluit by ons aan vir 'n gesellige braai — oop vir almal! 'n Lekker geleentheid om familie en vriende te sien en by te bly voor die groot dag.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SATURDAY -->
+            <div class="day-heading">
+                <h2>Saterdag, 5 September</h2>
+                <p>Die Groot Dag</p>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-time">14:00</div>
                     <div class="timeline-content">
-                        <h3>Gaste Arriveer</h3>
-                        <p>Welkom by die venue! Geniet verversings terwyl jy jou sitplek vind.</p>
+                        <h3>Gaste Neem Sitplekke In</h3>
+                        <p>Welkom by die seremonieterrein! Geniet verversings terwyl jy jou sitplek vind.</p>
                     </div>
                 </div>
 
@@ -54,7 +119,7 @@
                     <div class="timeline-time">15:45</div>
                     <div class="timeline-content">
                         <h3>Foto's &amp; Drankies</h3>
-                        <p>Groepfoto's word geneem terwyl gaste geniet van drankies en happies.</p>
+                        <p>Groepfoto's word geneem terwyl gaste van drankies en happies geniet.</p>
                     </div>
                 </div>
 
@@ -70,7 +135,7 @@
                     <div class="timeline-time">18:00</div>
                     <div class="timeline-content">
                         <h3>Aandete</h3>
-                        <p>Geniet 'n heerlike ete saam met ons. Die spyskaart word binnekort aangekondig.</p>
+                        <p>Geniet 'n heerlike ete saam met ons.</p>
                     </div>
                 </div>
 
@@ -78,7 +143,7 @@
                     <div class="timeline-time">19:30</div>
                     <div class="timeline-content">
                         <h3>Koek Sny &amp; Eerste Dans</h3>
-                        <p>Die paartjie sny die koek en deel hul eerste dans.</p>
+                        <p>Die bruidspaar sny die koek en deel hul eerste dans.</p>
                     </div>
                 </div>
 
@@ -99,12 +164,25 @@
                 </div>
             </div>
 
+            <!-- SUNDAY -->
+            <div class="day-heading">
+                <h2>Sondag, 6 September</h2>
+                <p>Totsiens &amp; Ontbyt</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00</div>
+                    <div class="timeline-content">
+                        <h3>Ontbyt &amp; Totsiens</h3>
+                        <p>Vir gaste wat oorbly, is daar 'n informele ontbyt. Kom sê totsiens en geniet 'n laaste koppie koffie saam. Uittektyd is om 10:00.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="photo-placeholder">
                 <p>[Voeg nog foto's van die venue of dekor hier in]</p>
             </div>
-
-            <h2>Volgende Dag</h2>
-            <p>Vir gaste wat oorbly, sal daar die volgende oggend 'n ontbyt wees. Dit is informeel en oop vir almal wat wil kom!</p>
         </section>
     </main>
 
