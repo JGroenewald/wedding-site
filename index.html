@@ -5,6 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .venue-link {
+            display: inline-block;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 2px;
+            transition: border-color 0.3s;
+        }
+        .venue-link:hover {
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* Dress Code Section */
+        .dress-code-section {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .dress-code-section h3 {
+            text-align: center;
+            color: var(--color-primary);
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+        .dress-code-vibe {
+            text-align: center;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+        .dress-code-rules {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+            line-height: 1.9;
+        }
+        .dress-code-rules strong {
+            color: var(--color-primary);
+        }
+        .colour-swatches {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--color-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: transform 0.2s;
+        }
+        .swatch:hover {
+            transform: scale(1.15);
+        }
+        .swatch-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .swatch-label {
+            display: block;
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--color-text-light);
+            margin-top: 0.3rem;
+        }
+        .colour-inspiration-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* No-go badges */
+        .no-go-colours {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .no-go-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 2px solid;
+        }
+        .no-go-badge.white-badge {
+            border-color: #ccc;
+            color: #666;
+            background: #fafafa;
+        }
+        .no-go-badge.black-badge {
+            border-color: #333;
+            color: #333;
+            background: #f0f0f0;
+        }
+        .no-go-badge.blue-badge {
+            border-color: #2563eb;
+            color: #2563eb;
+            background: #eff6ff;
+        }
+        .no-go-badge.denim-badge {
+            border-color: #4a6fa5;
+            color: #4a6fa5;
+            background: #f0f4f8;
+        }
+        .no-go-badge .no-x {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Contact cards */
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .contact-card {
+            text-align: center;
+        }
+        .contact-card .contact-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+        .contact-card a {
+            color: var(--color-text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent);
+        }
+        .contact-card a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Map button */
+        .map-btn {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 0.5rem;
+        }
+        .map-btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-1px);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -43,17 +214,74 @@
                 </div>
                 <div class="card">
                     <h3>Plek</h3>
-                    <p>[Naam van Lokaal]</p>
-                    <p>[Adres]</p>
+                    <p><strong>Pat Busch Mountain Reserve</strong></p>
+                    <p>Robertson, Wes-Kaap</p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://www.patbusch.co.za/" class="venue-link" target="_blank" rel="noopener">Besoek Webwerf →</a>
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://maps.app.goo.gl/dgFBWdLYis68VuFq5" class="map-btn" target="_blank" rel="noopener">📍 Kry Aanwysings</a>
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Kleredrag</h3>
-                    <p>[Kleredrag Kode]</p>
+                    <p><strong>Helder &amp; Vet</strong></p>
+                    <p>Semi-Formeel · Cocktail Vibes</p>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.5rem;">Sien volledige kleredrag gids hieronder ↓</p>
                 </div>
             </div>
 
             <div class="photo-placeholder">
                 <p>[Voeg nog 'n foto hier in]</p>
+            </div>
+
+            <!-- Dress Code Section -->
+            <div class="dress-code-section">
+                <h3>Kleredrag Gids</h3>
+                <p class="dress-code-vibe">Helder &amp; Vet · Semi-Formeel · Cocktail Vibes</p>
+
+                <div class="dress-code-rules">
+                    Trek aan in <strong>helder, vet kleure</strong> — dink cocktail-partytjie in die natuur.<br>
+                    Plat hakke of platskoene word aanbeveel vir die gras.
+                </div>
+
+                <div class="no-go-colours">
+                    <span class="no-go-badge white-badge"><span class="no-x">✕</span> Wit</span>
+                    <span class="no-go-badge black-badge"><span class="no-x">✕</span> Swart</span>
+                    <span class="no-go-badge blue-badge"><span class="no-x">✕</span> Blou</span>
+                    <span class="no-go-badge denim-badge"><span class="no-x">✕</span> Denim</span>
+                </div>
+
+                <p style="text-align: center; font-size: 0.95rem; color: var(--color-text); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Kleur Inspirasie</strong></p>
+
+                <div class="colour-swatches">
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #FF98AE;"></div>
+                        <span class="swatch-label">Pienk</span>
+                    </div>
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #BAC563;"></div>
+                        <span class="swatch-label">Groen</span>
+                    </div>
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #DE3464;"></div>
+                        <span class="swatch-label">Bessierooi</span>
+                    </div>
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #FD0C60;"></div>
+                        <span class="swatch-label">Magenta</span>
+                    </div>
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #FF9A3D;"></div>
+                        <span class="swatch-label">Oranje</span>
+                    </div>
+                    <div class="swatch-wrapper">
+                        <div class="swatch" style="background-color: #72892C;"></div>
+                        <span class="swatch-label">Olyfgroen</span>
+                    </div>
+                </div>
+
+                <p class="colour-inspiration-text">Hierdie kleure is net idees — enige helder, vet kleur is welkom!</p>
             </div>
 
             <h2>Wat om te Verwag</h2>
@@ -63,6 +291,19 @@
 
             <div class="photo-placeholder">
                 <p>[Voeg nog 'n foto hier in]</p>
+            </div>
+
+            <h2>Kontak Ons</h2>
+            <p style="text-align: center;">Het jy enige vrae? Kontak ons gerus!</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <p class="contact-name">Jacques</p>
+                    <p><a href="tel:+27823163769">082 316 3769</a></p>
+                </div>
+                <div class="contact-card">
+                    <p class="contact-name">Alischa</p>
+                    <p><a href="tel:+27789172563">078 917 2563</a></p>
+                </div>
             </div>
         </section>
     </main>
