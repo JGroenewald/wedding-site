@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gereelde Vrae - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-item h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-item h3::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--color-primary);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        .faq-item.open h3::after {
+            content: '−';
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, margin 0.35s ease;
+            margin-top: 0;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -28,64 +58,73 @@
         <section class="content">
             <div class="faq-item">
                 <h3>Wat is die kleredragkode?</h3>
+                <div class="faq-answer">
                 <p><strong>Bright &amp; Bold — Semi-Formeel, Cocktail Vibes.</strong></p>
                 <p>Trek Bright &amp; Bold aan. Blokhakke of platskoene word aanbeveel vir die gras. Geen wit, swart, blou of denim nie. Sien die <a href="index.html" style="color: var(--color-primary);">Tuis-bladsy</a> vir kleur-inspirasie met kleurmonsters!</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Kan ek kinders bring?</h3>
+                <div class="faq-answer">
                 <p>Kinders wat genooi is, is baie welkom! Maak asseblief seker dit is op jou uitnodiging aangedui. Neem asseblief kennis, 'n kind wat van ’n standaard slaapplek gebruik maak, sal die normale volwasse tarief geld, aangesien daardie slaapplek andersins vir ’n volwasse gas beskikbaar sou wees. Indien ons vir ’n kind ’n alternatiewe slaapplek kan reël (soos ’n matras), sal daar geen koste wees nie</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Is daar parkering beskikbaar?</h3>
+                <div class="faq-answer">
                 <p>Gaste wat op die venue oorslaap, kan asseblief by hul onderskeie eenhede parkeer. Voertuie sal vir die duur van die naweek daar bly staan. Geen voertuie sal gebruik word om na die seremonie of onthaal te ry nie, aangesien alles binne loopafstand is en daar baie kinders in die area sal wees. Gaste wat nie op die venue oorslaap nie, sal aangewese parkering tot hul beskikking hê..</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Wat van geskenke?</h3>
+                <div class="faq-answer">
                 <p>Ons grootste wens is om ons spesiale dag saam met julle te vier. Julle teenwoordigheid beteken vir ons soveel meer as enige geskenk. Ons verwag dus geen geskenke nie. Indien julle egter voel dat julle ’n bydrae tot ons wittebrood wil maak, sal dit met dankbaarheid ontvang word.</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Hoe laat begin en eindig die troue?</h3>
+                <div class="faq-answer">
                 <p>Gaste kan vanaf 15:00 op Vrydag arriveer (nie vroeër nie, tensy dit spesifiek met jou gereël is). Gaste neem sitplekke in om 14:30 en die seremonie begin om 15:00. Die fees duur tot laat. Sondagoggend moet almal teen 10:00 uitgetrek het — daar word nie ontbyt voorsien nie. Sien die <a href="program.html" style="color: var(--color-primary);">Program-bladsy</a> vir die volledige skedule.</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Is daar spesiale dieetopsies?</h3>
+                <div class="faq-answer">
                 <p>Kontak ons asseblief as jy spesiale dieetvereistes het sodat ons vooraf kan reël. Sien die kontakbesonderhede hieronder.</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Wat as dit reën?</h3>
+                <div class="faq-answer">
                 <p>Dit is 'n buitelug-troue in September, so die moontlikheid van reën is daar. Daar sal 'n groot tent oor die dansvloer en tafels wees. Onthou om iets warms saam te bring, want dit kan nogal koud raak in die aande!</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Is daar 'n kroeg op die terrein?</h3>
+                <div class="faq-answer">
                 <p>Daar is nie 'n kroeg op die terrein beskikbaar nie, dus moet gaste hulle eie drank vir Vrydagaand saambring.Vir Saterdagaand sal daar 'n beperkte hoeveelheid sap, wyn, bier en gin voorsien word. Ons beveel sterk aan dat gaste ook vir Saterdagaand hulle eie drank saambring, aangesien die voorraad beperk is en gaste self verantwoordelik sal wees vir hulle eie drank sodra dit opraak.</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Wat van kos vir die naweek?</h3>
+                <div class="faq-answer">
                 <p>Vrydagaand word 'n braai vir almal voorsien — bring net julle eie drank saam vir die aand. Saterdagaand is kos voorsien tydens die troue-onthaal. Vir die res van die naweek is dit selfdiens. Elke verblyf het 'n kombuisie waar julle self kos kan berei, of julle is welkom om dorp toe te gaan vir inkopies.</p>
             </div>
-			
-			<div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Wat van swem?</h3>
+                <div class="faq-answer">
                 <p>Elke tent en huisie het sy eie Jacuzzi en daar is n plaasdam sowel as 'n groot Soutwaterswembad, so bring asseblief swemklere ook!</p>
             </div>
-
-            <div class="faq-item">
+            </div><div class="faq-item">
                 <h3>Wie kan ek kontak vir meer inligting?</h3>
+                <div class="faq-answer">
                 <p>Kontak gerus vir Jacques by <a href="tel:+27823163769" style="color: var(--color-primary);">082 316 3769</a> of Alischa by <a href="tel:+27789172563" style="color: var(--color-primary);">078 917 2563</a>.</p>
             </div>
-        </section>
+            </div></section>
     </main>
 
     <footer>
         <p>&copy; 2026 Ons Troue. Alle regte voorbehou.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.faq-item h3').forEach(h3 => {
+            h3.addEventListener('click', () => {
+                h3.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
