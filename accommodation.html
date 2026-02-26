@@ -6,14 +6,60 @@
     <title>Akkommodasie - Ons Troue</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .update-instructions {
-            background: #fff8e7;
-            border: 1px solid var(--color-accent);
+        .search-container {
+            position: relative;
+            margin: 1.5rem 0 2rem;
+        }
+        .search-input {
+            width: 100%;
+            padding: 0.9rem 1.25rem 0.9rem 3rem;
+            border: 2px solid var(--color-border);
             border-radius: var(--radius);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            font-size: 0.9rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-text);
+            background: var(--color-bg);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+        }
+        .search-input::placeholder {
             color: var(--color-text-light);
+            font-style: italic;
+        }
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.15rem;
+            color: var(--color-text-light);
+            pointer-events: none;
+        }
+        .search-result-info {
+            text-align: center;
+            color: var(--color-primary);
+            font-style: italic;
+            margin: -0.5rem 0 1.5rem;
+            font-size: 0.95rem;
+            display: none;
+        }
+        .search-result-info.visible {
+            display: block;
+        }
+        .house-section.highlight {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px var(--color-accent), var(--shadow-medium);
+        }
+        .guest-name.highlight {
+            background: var(--color-accent);
+            font-weight: 600;
+        }
+        .house-section.dimmed {
+            opacity: 0.35;
         }
     </style>
 </head>
@@ -32,11 +78,20 @@
 
     <header>
         <h1>Akkommodasie</h1>
-        <p class="subtitle">Waar almal bly tydens ons troue naweek</p>
+        <p class="subtitle">Waar almal bly tydens ons trou naweek</p>
     </header>
 
     <main>
         <section class="content">
+            <h2>Soek Jou Kamer</h2>
+            <p>Tik jou naam hieronder in om vinnig te sien waar jy toegewys is!</p>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="guestSearch" placeholder="Tik jou naam hier in..." autocomplete="off">
+            </div>
+            <p class="search-result-info" id="searchInfo"></p>
+
             <h2>Akkommodasie Kaart</h2>
             <p>Hier is 'n kaart wat al die akkommodasie opsies wys. Jy kan jou toegewysde plek maklik vind!</p>
 
@@ -45,16 +100,17 @@
             </div>
 
             <h2>Op Terrein Akkommodasie</h2>
-            <p>Die meeste gaste bly op die venue terrein in verskillende huise en bungalows. Kyk hieronder om te sien waar jy toegewys is!</p>
+            <p>Die meerderheid gaste word op die venue se terrein in huise, cottages en AfriCamps geakkommodeer. Verwys asseblief hieronder om te sien waar jy toegewys is. Alles is selfsorg eenhede wat 'n kombuisie, handoeke, beddegoed voorsien.</p>
 
             <div id="onsite-accommodation"></div>
 
             <h2>Af Terrein Akkommodasie</h2>
-            <div class="offsite-section">
+            <div class="offsite-section" id="offsite-section">
                 <h3>Familie of Self-gereël</h3>
                 <p>Die volgende gaste het hul eie akkommodasie gereël:</p>
                 <div id="offsite-guests"></div>
             </div>
+
             <h2>Kaart</h2>
             <div class="photo-placeholder">
                 <img src="photos/Kaart.png" alt="Terreinkaart">
@@ -77,38 +133,140 @@
         const accommodationData = {
             onsite: [
                 {
-                    name: "Hoofhuis",
-                    description: "Die groot huis langs die dam",
-                    guests: ["Gaste Naam 1", "Gaste Naam 2", "Gaste Naam 3", "Gaste Naam 4"]
+                    name: "Oak",
+                    description: "Oop plan met dubbelbed, slipbad, lugversorging, instap-stortbad, kaggel, stoep & braai",
+                    guests: ["Alischa & Jacques"]
                 },
                 {
-                    name: "Bungalow A",
-                    description: "Klein bungalow by die tuin",
-                    guests: ["Gaste Naam 5", "Gaste Naam 6"]
+                    name: "Fig",
+                    description: "Oop plan met dubbelbed, stortbad & enkelbed in alkoof van die sitkamer, kaggel & braai",
+                    guests: ["Mariaan & Andre"]
                 },
                 {
-                    name: "Bungalow B",
-                    description: "Bungalow met braai area",
-                    guests: ["Gaste Naam 7", "Gaste Naam 8", "Gaste Naam 9"]
+                    name: "Quince",
+                    description: "Aparte slaapkamer met dubbelbed, dan met stapelbed vir kinders in alkoof van die sitkamer, kaggel & braai",
+                    guests: ["Hannes, Petro", "Nadia, Klein Hannes"]
                 },
                 {
-                    name: "Cottage",
-                    description: "Privaat cottage met eie badkamer",
-                    guests: ["Gaste Naam 10", "Gaste Naam 11"]
+                    name: "Pine",
+                    description: "Aparte slaapkamer met 2 enkelbeddens, dan met dubbelbed in alkoof van die oop-plan sitkamer met kaggel, braai op die stoep",
+                    guests: ["Irna, Anton", "Jomyri", "Heinrich"]
+                },
+                {
+                    name: "Nightjar",
+                    description: "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
+                    guests: ["Sonja, Gert", "Monique", "Reinardt"]
+                },
+                {
+                    name: "Hadeda",
+                    description: "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
+                    guests: ["Shelley, Fred", "Emily, Ouma B"]
+                },
+                {
+                    name: "Farmhouse 1",
+                    description: "Voorkamer langs die hoofsaal",
+                    guests: ["Ryno", "Zimone"]
+                },
+                {
+                    name: "Farmhouse 2",
+                    description: "Gesellige agterkamer langs die tweede sitkamer",
+                    guests: ["Ronnie", "Lena"]
+                },
+                {
+                    name: "Farmhouse 3",
+                    description: "Ruim hoofslaapkamer langs die tweede sitkamer, met opsie van en-suite badkamer (met bad)",
+                    guests: ["Lindie, Shawn", "2.5 kid, 4 kid"]
+                },
+                {
+                    name: "Farmhouse 4",
+                    description: "Groot slaapkamer langs die gang",
+                    guests: ["Shanel, Jurgen", "Gustav", "Louise"]
+                },
+                {
+                    name: "Farmhouse 5",
+                    description: "Hoekslaapkamer langs die voorstoep buite",
+                    guests: ["Chris, Nelie", "Jaco", "Chris"]
+                },
+                {
+                    name: "Farmhouse 6",
+                    description: "Syslaapkamer langs die voorstoep buite",
+                    guests: ["Jean Pierre, Esme", "Tyrone"]
+                },
+                {
+                    name: "Gardenflat 7",
+                    description: "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
+                    guests: ["Mandie, Christiaan"]
+                },
+                {
+                    name: "Gardenflat 8",
+                    description: "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
+                    guests: ["Oupa, Alida"]
+                },
+                {
+                    name: "Garden Flat – Sitkamer-area",
+                    description: "Ruim sitkamer-area onder die stoep, tuinwoonstel deel 'n badkamer. Opsie vir tieners, familie van 5, enkellopend of selfs personeel",
+                    guests: ["Mat", "Bennie", "Regard", "JJ", "Janco"]
+                },
+                {
+                    name: "AfriCamp 1",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Nadine, Hector", "Miane, Juanita", "Dandre"]
+                },
+                {
+                    name: "AfriCamp 2",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Francios, Maroelien", "Gernot, Mienke", "Hein"]
+                },
+                {
+                    name: "AfriCamp 3",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Wessel, Kyla", "JP, Daniella"]
+                },
+                {
+                    name: "AfriCamp 4",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Leanne, Jesse", "Zanelle, Alexander"]
+                },
+                {
+                    name: "AfriCamp 5",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Marishe, Jesse", "Jaco, Monique"]
+                },
+                {
+                    name: "AfriCamp 6",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Ben Franco, Chene", "Carli, Anja", "Hannah"]
+                },
+                {
+                    name: "AfriCamp 7",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Franje, Louw", "Michelle, Henro"]
+                },
+                {
+                    name: "AfriCamp 8",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Amelia, Chaldon", "Leandri, Milan"]
+                },
+                {
+                    name: "AfriCamp 9",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Carla, Armand", "Ingerese, DW"]
+                },
+                {
+                    name: "AfriCamp 10",
+                    description: "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+                    guests: ["Ima, Carus", "Danika, Eddie"]
                 }
             ],
-            offsite: [
-                { name: "Gaste Naam 12", note: "Bly by familie" },
-                { name: "Gaste Naam 13", note: "Self gereël" },
-                { name: "Gaste Naam 14", note: "Bly by familie" }
-            ]
+            offsite: []
         };
 
         // Render onsite
         const onsiteContainer = document.getElementById('onsite-accommodation');
-        accommodationData.onsite.forEach(house => {
+        accommodationData.onsite.forEach((house, index) => {
             const section = document.createElement('div');
             section.className = 'house-section';
+            section.dataset.index = index;
             section.innerHTML = `
                 <h3>${house.name}</h3>
                 <p style="color: var(--color-text-light); font-style: italic;">${house.description}</p>
@@ -120,13 +278,84 @@
         });
 
         // Render offsite
-        const offsiteContainer = document.getElementById('offsite-guests');
-        const offsiteList = document.createElement('div');
-        offsiteList.className = 'guest-list';
-        offsiteList.innerHTML = accommodationData.offsite
-            .map(g => `<div class="guest-name">${g.name} <small style="color: var(--color-text-light);">— ${g.note}</small></div>`)
-            .join('');
-        offsiteContainer.appendChild(offsiteList);
+        const offsiteSection = document.getElementById('offsite-section');
+        if (accommodationData.offsite.length === 0) {
+            offsiteSection.style.display = 'none';
+            // Also hide the h2 before it
+            const h2s = document.querySelectorAll('h2');
+            h2s.forEach(h2 => {
+                if (h2.textContent.trim() === 'Af Terrein Akkommodasie') {
+                    h2.style.display = 'none';
+                }
+            });
+        } else {
+            const offsiteContainer = document.getElementById('offsite-guests');
+            const offsiteList = document.createElement('div');
+            offsiteList.className = 'guest-list';
+            offsiteList.innerHTML = accommodationData.offsite
+                .map(g => `<div class="guest-name">${g.name} <small style="color: var(--color-text-light);">— ${g.note}</small></div>`)
+                .join('');
+            offsiteContainer.appendChild(offsiteList);
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('guestSearch');
+        const searchInfo = document.getElementById('searchInfo');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            const houseSections = document.querySelectorAll('.house-section');
+            const guestNames = document.querySelectorAll('.guest-name');
+
+            // Clear all highlights and dims
+            houseSections.forEach(s => { s.classList.remove('highlight', 'dimmed'); });
+            guestNames.forEach(g => { g.classList.remove('highlight'); });
+
+            if (query.length < 2) {
+                searchInfo.classList.remove('visible');
+                return;
+            }
+
+            let matchFound = false;
+            let matchRoomName = '';
+
+            houseSections.forEach((section, idx) => {
+                const house = accommodationData.onsite[idx];
+                const hasMatch = house.guests.some(g => g.toLowerCase().includes(query));
+
+                if (hasMatch) {
+                    matchFound = true;
+                    matchRoomName = house.name;
+                    section.classList.add('highlight');
+
+                    // Highlight matching guest names
+                    const names = section.querySelectorAll('.guest-name');
+                    names.forEach(nameEl => {
+                        if (nameEl.textContent.toLowerCase().includes(query)) {
+                            nameEl.classList.add('highlight');
+                        }
+                    });
+                } else {
+                    section.classList.add('dimmed');
+                }
+            });
+
+            if (matchFound) {
+                searchInfo.textContent = `✓ Gevind! Jy is in "${matchRoomName}"`;
+                searchInfo.classList.add('visible');
+
+                // Scroll to first match
+                const firstMatch = document.querySelector('.house-section.highlight');
+                if (firstMatch) {
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            } else {
+                searchInfo.textContent = 'Geen resultate gevind nie — probeer weer met jou naam of van.';
+                searchInfo.classList.add('visible');
+                // Remove dims if nothing found so everything shows
+                houseSections.forEach(s => s.classList.remove('dimmed'));
+            }
+        });
     </script>
 </body>
 </html>

@@ -1,55 +1,130 @@
 {
   "onsite": [
     {
-      "name": "Hoofeenhuis / Main House",
-      "description": "Die groot huis op die terrein",
-      "guests": [
-        "Gaste Naam 1",
-        "Gaste Naam 2",
-        "Gaste Naam 3 & Naam 4"
-      ]
+      "name": "Oak",
+      "description": "Oop plan met dubbelbed, slipbad, lugversorging, instap-stortbad, kaggel, stoep & braai",
+      "guests": ["Alischa & Jacques"]
     },
     {
-      "name": "Bungalow 1 – Protea",
-      "description": "Langs die dam",
-      "guests": [
-        "Gaste Naam 5 & Naam 6",
-        "Gaste Naam 7"
-      ]
+      "name": "Fig",
+      "description": "Oop plan met dubbelbed, stortbad & enkelbed in alkoof van die sitkamer, kaggel & braai",
+      "guests": ["Mariaan & Andre"]
     },
     {
-      "name": "Bungalow 2 – Fynbos",
-      "description": "By die tuin",
-      "guests": [
-        "Gaste Naam 8",
-        "Gaste Naam 9 & Naam 10"
-      ]
+      "name": "Quince",
+      "description": "Aparte slaapkamer met dubbelbed, dan met stapelbed vir kinders in alkoof van die sitkamer, kaggel & braai",
+      "guests": ["Hannes, Petro", "Nadia, Klein Hannes"]
     },
     {
-      "name": "Cottage – Rooibos",
-      "description": "Agter die swembad",
-      "guests": [
-        "Gaste Naam 11 & Naam 12",
-        "Gaste Naam 13"
-      ]
+      "name": "Pine",
+      "description": "Aparte slaapkamer met 2 enkelbeddens, dan met dubbelbed in alkoof van die oop-plan sitkamer met kaggel, braai op die stoep",
+      "guests": ["Irna, Anton", "Jomyri", "Heinrich"]
+    },
+    {
+      "name": "Nightjar",
+      "description": "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
+      "guests": ["Sonja, Gert", "Monique", "Reinardt"]
+    },
+    {
+      "name": "Hadeda",
+      "description": "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
+      "guests": ["Shelley, Fred", "Emily, Ouma B"]
+    },
+    {
+      "name": "Farmhouse 1",
+      "description": "Voorkamer langs die hoofsaal",
+      "guests": ["Ryno", "Zimone"]
+    },
+    {
+      "name": "Farmhouse 2",
+      "description": "Gesellige agterkamer langs die tweede sitkamer",
+      "guests": ["Ronnie", "Lena"]
+    },
+    {
+      "name": "Farmhouse 3",
+      "description": "Ruim hoofslaapkamer langs die tweede sitkamer, met opsie van en-suite badkamer (met bad)",
+      "guests": ["Lindie, Shawn", "2.5 kid, 4 kid"]
+    },
+    {
+      "name": "Farmhouse 4",
+      "description": "Groot slaapkamer langs die gang",
+      "guests": ["Shanel, Jurgen", "Gustav", "Louise"]
+    },
+    {
+      "name": "Farmhouse 5",
+      "description": "Hoekslaapkamer langs die voorstoep buite",
+      "guests": ["Chris, Nelie", "Jaco", "Chris"]
+    },
+    {
+      "name": "Farmhouse 6",
+      "description": "Syslaapkamer langs die voorstoep buite",
+      "guests": ["Jean Pierre, Esme", "Tyrone"]
+    },
+    {
+      "name": "Gardenflat 7",
+      "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
+      "guests": ["Mandie, Christiaan"]
+    },
+    {
+      "name": "Gardenflat 8",
+      "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
+      "guests": ["Oupa, Alida"]
+    },
+    {
+      "name": "Garden Flat – Sitkamer-area",
+      "description": "Ruim sitkamer-area onder die stoep, tuinwoonstel deel 'n badkamer. Opsie vir tieners, familie van 5, enkellopend of selfs personeel",
+      "guests": ["Mat", "Bennie", "Regard", "JJ", "Janco"]
+    },
+    {
+      "name": "AfriCamp 1",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Nadine, Hector", "Miane, Juanita", "Dandre"]
+    },
+    {
+      "name": "AfriCamp 2",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Francios, Maroelien", "Gernot, Mienke", "Hein"]
+    },
+    {
+      "name": "AfriCamp 3",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Wessel, Kyla", "JP, Daniella"]
+    },
+    {
+      "name": "AfriCamp 4",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Leanne, Jesse", "Zanelle, Alexander"]
+    },
+    {
+      "name": "AfriCamp 5",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Marishe, Jesse", "Jaco, Monique"]
+    },
+    {
+      "name": "AfriCamp 6",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Ben Franco, Chene", "Carli, Anja", "Hannah"]
+    },
+    {
+      "name": "AfriCamp 7",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Franje, Louw", "Michelle, Henro"]
+    },
+    {
+      "name": "AfriCamp 8",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Amelia, Chaldon", "Leandri, Milan"]
+    },
+    {
+      "name": "AfriCamp 9",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Carla, Armand", "Ingerese, DW"]
+    },
+    {
+      "name": "AfriCamp 10",
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
+      "guests": ["Ima, Carus", "Danika, Eddie"]
     }
   ],
-  "offsite": [
-    {
-      "name": "Familie",
-      "description": "Bly by familie in die omgewing",
-      "guests": [
-        "Gaste Naam 14",
-        "Gaste Naam 15 & Naam 16"
-      ]
-    },
-    {
-      "name": "Soek Self / Find Your Own",
-      "description": "Bespreek jou eie akkommodasie",
-      "guests": [
-        "Gaste Naam 17",
-        "Gaste Naam 18"
-      ]
-    }
-  ]
+  "offsite": []
 }
