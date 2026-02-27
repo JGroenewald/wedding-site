@@ -172,18 +172,32 @@
             transform: translateY(-1px);
         }
     </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    <meta name="description" content="Jacques &amp; Alischa se Troue — 4-6 September 2026, Pat Busch Mountain Reserve, Robertson">
+    <meta property="og:title" content="Jacques &amp; Alischa se Troue">
+    <meta property="og:description" content="Jacques &amp; Alischa se Troue — 4-6 September 2026, Pat Busch Mountain Reserve, Robertson">
+    <meta property="og:image" content="photos/8.jpeg">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html" class="active">Tuis</a></li>
-            <li><a href="accommodation.html">Akkommodasie</a></li>
-            <li><a href="activities.html">Aktiwiteite</a></li>
-            <li><a href="faq.html">Algemene Vrae</a></li>
-            <li><a href="song-requests.html">Liedjie Versoeke</a></li>
-            <li><a href="program.html">Program</a></li>
-            <li><a href="rsvp.html">RSVP</a></li>
-        </ul>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">J &amp; A</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="index.html" class="active">Tuis</a></li>
+                <li><a href="accommodation.html">Akkommodasie</a></li>
+                <li><a href="activities.html">Aktiwiteite</a></li>
+                <li><a href="faq.html">Gereelde Vrae</a></li>
+                <li><a href="song-requests.html">Liedjie Versoeke</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header>
@@ -252,31 +266,31 @@
 
                 <div class="colour-swatches">
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #FF98AE;"></div>
+                        <div class="swatch" style="background-color: #FF98AE;" role="img" aria-label="Pienk"></div>
                         <span class="swatch-label">Pienk</span>
                     </div>
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #BAC563;"></div>
+                        <div class="swatch" style="background-color: #BAC563;" role="img" aria-label="Groen"></div>
                         <span class="swatch-label">Groen</span>
                     </div>
 					<div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #BF40BF;"></div>
+                        <div class="swatch" style="background-color: #BF40BF;" role="img" aria-label="Pers"></div>
                         <span class="swatch-label">Pers</span>
                     </div>
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #DE3464;"></div>
+                        <div class="swatch" style="background-color: #DE3464;" role="img" aria-label="Bessierooi"></div>
                         <span class="swatch-label">Bessierooi</span>
                     </div>
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #FD0C60;"></div>
+                        <div class="swatch" style="background-color: #FD0C60;" role="img" aria-label="Magenta"></div>
                         <span class="swatch-label">Magenta</span>
                     </div>
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #FF9A3D;"></div>
+                        <div class="swatch" style="background-color: #FF9A3D;" role="img" aria-label="Oranje"></div>
                         <span class="swatch-label">Oranje</span>
                     </div>
                     <div class="swatch-wrapper">
-                        <div class="swatch" style="background-color: #72892C;"></div>
+                        <div class="swatch" style="background-color: #72892C;" role="img" aria-label="Olyfgroen"></div>
                         <span class="swatch-label">Olyfgroen</span>
                     </div>
                 </div>
@@ -291,6 +305,12 @@
 
             <div class="photo-placeholder">
                 <img src="photos/7.jpeg" alt="Ons Troue">
+            </div>
+
+            <!-- RSVP Reminder -->
+            <div class="rsvp-banner">
+                <p>RSVP voor 30 April 2026</p>
+                <a href="rsvp.html">Bevestig Nou →</a>
             </div>
 
             <h2>Kontak Ons</h2>
@@ -311,5 +331,24 @@
     <footer>
         <p>&copy; 2026 Ons Troue. Alle regte voorbehou.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navUl = document.querySelector('nav ul');
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+        });
+        // Close menu when a link is clicked
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navUl.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>

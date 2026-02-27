@@ -41,18 +41,32 @@
             border-bottom-color: var(--color-primary);
         }
     </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    <meta name="description" content="Versoek jou gunsteling liedjies vir ons troue!">
+    <meta property="og:title" content="Jacques &amp; Alischa se Troue">
+    <meta property="og:description" content="Versoek jou gunsteling liedjies vir ons troue!">
+    <meta property="og:image" content="photos/8.jpeg">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Tuis</a></li>
-            <li><a href="accommodation.html">Akkommodasie</a></li>
-            <li><a href="activities.html">Aktiwiteite</a></li>
-            <li><a href="faq.html">Gereelde Vrae</a></li>
-            <li><a href="song-requests.html" class="active">Liedjie Versoeke</a></li>
-            <li><a href="program.html">Program</a></li>
-            <li><a href="rsvp.html">RSVP</a></li>
-        </ul>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">J &amp; A</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Tuis</a></li>
+                <li><a href="accommodation.html">Akkommodasie</a></li>
+                <li><a href="activities.html">Aktiwiteite</a></li>
+                <li><a href="faq.html">Gereelde Vrae</a></li>
+                <li><a href="song-requests.html" class="active">Liedjie Versoeke</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header>
@@ -87,5 +101,24 @@
     <footer>
         <p>&copy; 2026 Ons Troue. Alle regte voorbehou.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navUl = document.querySelector('nav ul');
+        hamburger.addEventListener('click', () => {
+            navUl.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+        });
+        // Close menu when a link is clicked
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navUl.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
