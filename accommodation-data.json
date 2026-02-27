@@ -3,127 +3,127 @@
     {
       "name": "Oak",
       "description": "Oop plan met dubbelbed, slipbad, lugversorging, instap-stortbad, kaggel, stoep & braai",
-      "guests": ["Alischa & Jacques"]
+      "guests": ["Alischa Heunes & Jacques Groenewald"]
     },
     {
       "name": "Fig",
       "description": "Oop plan met dubbelbed, stortbad & enkelbed in alkoof van die sitkamer, kaggel & braai",
-      "guests": ["Mariaan & Andre"]
+      "guests": ["Mariaan Truter & Andre Truter"]
     },
     {
       "name": "Quince",
       "description": "Aparte slaapkamer met dubbelbed, dan met stapelbed vir kinders in alkoof van die sitkamer, kaggel & braai",
-      "guests": ["Hannes, Petro", "Nadia, Klein Hannes"]
+      "guests": ["Petro Buitendag & Hannes Buitendag", "Nadia Buitendag & Hannes Buitendag"]
     },
     {
       "name": "Pine",
       "description": "Aparte slaapkamer met 2 enkelbeddens, dan met dubbelbed in alkoof van die oop-plan sitkamer met kaggel, braai op die stoep",
-      "guests": ["Irna, Anton", "Jomyri", "Heinrich"]
+      "guests": ["Irna van Staden & Anton van Staden", "Jomyri Jacobs & Heinrich Jacobs", "Femke Jacobs"]
     },
     {
       "name": "Nightjar",
       "description": "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
-      "guests": ["Sonja, Gert", "Monique", "Reinardt"]
+      "guests": ["Sonja Heunes & Gert Heunes", "Monique Heunes & Reynard Kidson"]
     },
     {
       "name": "Hadeda",
       "description": "Twee-slaapkamer cottage, spa-bad, instap-stortbad, houtgevuurde warmwaterbak, lugversorging, hangmatte, kaggel & braai",
-      "guests": ["Shelley, Fred", "Emily, Ouma B"]
+      "guests": ["Shelley Brouns & Fred Brouns", "Emily Brouns & Bonnie Gerber", "Bjorn Brouns"]
     },
     {
       "name": "Farmhouse 1",
       "description": "Voorkamer langs die hoofsaal",
-      "guests": ["Ryno", "Zimone"]
+      "guests": ["Zimone Groenewald & Ryno Groenewald", "Danika Groenewald & Anlea Groenewald"]
     },
     {
       "name": "Farmhouse 2",
       "description": "Gesellige agterkamer langs die tweede sitkamer",
-      "guests": ["Ronnie", "Lena"]
+      "guests": ["Lena Groenewald & Ronnie Groenewald"]
     },
     {
       "name": "Farmhouse 3",
       "description": "Ruim hoofslaapkamer langs die tweede sitkamer, met opsie van en-suite badkamer (met bad)",
-      "guests": ["Lindie, Shawn", "2.5 kid, 4 kid"]
+      "guests": ["Lindie Vosloo & Sean Vosloo", "Vosloo Kinders"]
     },
     {
       "name": "Farmhouse 4",
       "description": "Groot slaapkamer langs die gang",
-      "guests": ["Shanel, Jurgen", "Gustav", "Louise"]
+      "guests": ["Shanel Putz & Jurgen Putz", "Putz Kinders (Kot & Lounge)", "Mika Groenewald & Darius Groenewald", "Louise Groenewald & Gustav Groenewald"]
     },
     {
       "name": "Farmhouse 5",
       "description": "Hoekslaapkamer langs die voorstoep buite",
-      "guests": ["Chris, Nelie", "Jaco", "Chris"]
+      "guests": ["Nelie Groenewald & Chris Groenewald", "Jaco Groenewald & Chris Groenewald"]
     },
     {
       "name": "Farmhouse 6",
       "description": "Syslaapkamer langs die voorstoep buite",
-      "guests": ["Jean Pierre, Esme", "Tyrone"]
+      "guests": ["Esme Marais & Jean Pierre Marais", "Tyrone Kriek"]
     },
     {
       "name": "Gardenflat 7",
       "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
-      "guests": ["Mandie, Christiaan"]
+      "guests": ["Mandie Potgieter & Christiaan Potgieter"]
     },
     {
       "name": "Gardenflat 8",
       "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
-      "guests": ["Oupa, Alida"]
+      "guests": ["Oupa Groenewald & Alida"]
     },
     {
-      "name": "Garden Flat – Sitkamer-area",
+      "name": "Garden Flat \u2013 Sitkamer-area",
       "description": "Ruim sitkamer-area onder die stoep, tuinwoonstel deel 'n badkamer. Opsie vir tieners, familie van 5, enkellopend of selfs personeel",
-      "guests": ["Mat", "Bennie", "Regard", "JJ", "Janco"]
+      "guests": ["Mattieu Bettings", "Bennie Buys", "Regard Groenewald", "JJ Venter", "Janco Malan"]
     },
     {
       "name": "AfriCamp 1",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Nadine, Hector", "Miane, Juanita", "Dandre"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Nadine Macpherson & Hector Macpherson", "Miane Macpherson & Juanita Dippenaar", "Dandre Macpherson"]
     },
     {
       "name": "AfriCamp 2",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Francios, Maroelien", "Gernot, Mienke", "Hein"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Maroelien Joubert & Francios Joubert", "Mienke Schaaf & Gernot Schaaf", "Hein Schaaf"]
     },
     {
       "name": "AfriCamp 3",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Wessel, Kyla", "JP, Daniella"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Kayla Pretorius & Wessel Pretorius", "Daniella Bezuidenhout & JP Bezuidenhout"]
     },
     {
       "name": "AfriCamp 4",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Leanne, Jesse", "Zanelle, Alexander"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Leanne Geleijnse & Jesse Mills", "Zanelle Klose & Alexander Klose"]
     },
     {
       "name": "AfriCamp 5",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Marishe, Jesse", "Jaco, Monique"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Chene Havenga & Ben-Franco Havenga", "Monique De Wet & Jaco De Wet"]
     },
     {
       "name": "AfriCamp 6",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Ben Franco, Chene", "Carli, Anja", "Hannah"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Marishe Ekkerd & Jesse Ekkerd", "Carli Botha & Anja Du Plessis", "Hannah Main"]
     },
     {
       "name": "AfriCamp 7",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Franje, Louw", "Michelle, Henro"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Franje Dyson & Louwtjie Dyson", "Michelle van de Venter & Henro Hills"]
     },
     {
       "name": "AfriCamp 8",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Amelia, Chaldon", "Leandri, Milan"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Amelia Jacobs & Chaldon Fourie", "Leandri van Veenhuyzen & Milan van Veenhuyzen"]
     },
     {
       "name": "AfriCamp 9",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Carla, Armand", "Ingerese, DW"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Carla Horak & Armand Horak", "Ingerese Schoeman & DW Schoeman"]
     },
     {
       "name": "AfriCamp 10",
-      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & warmwaterbak (hot tub)",
-      "guests": ["Ima, Carus", "Danika, Eddie"]
+      "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
+      "guests": ["Ima Kruger & Carus Kruger", "Danica van der Westhuizen & Eduard van der Westhuizen"]
     }
   ],
   "offsite": []
