@@ -218,23 +218,14 @@ p {
 
 /* ── Photo Containers ── */
 .photo-placeholder {
+    background: var(--color-bg-warm);
+    border: 2px dashed var(--color-accent);
     border-radius: var(--radius);
+    padding: 1rem;
     text-align: center;
     margin: 1.5rem 0;
     color: var(--color-primary);
     font-style: italic;
-    /* Placeholder styling for containers without images */
-    background: var(--color-bg-warm);
-    border: 2px dashed var(--color-accent);
-    padding: 1rem;
-}
-
-/* When a real image is present, remove placeholder styling */
-.photo-placeholder:has(img) {
-    background: none;
-    border: none;
-    padding: 0;
-    overflow: hidden;
 }
 
 .photo-placeholder img {
