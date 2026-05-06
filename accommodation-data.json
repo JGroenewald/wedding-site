@@ -13,7 +13,7 @@
     {
       "name": "Quince",
       "description": "Aparte slaapkamer met dubbelbed, dan met stapelbed vir kinders in alkoof van die sitkamer, kaggel & braai",
-      "guests": ["Petro Buitendag & Hannes Buitendag", "Nadia Buitendag & Hannes Buitendag"]
+      "guests": ["Herman Goosen & Magda Goosen","Marius Pretorius"]
     },
     {
       "name": "Pine",
@@ -33,7 +33,7 @@
     {
       "name": "Farmhouse 1",
       "description": "Voorkamer langs die hoofsaal",
-      "guests": ["Zimone Groenewald & Reino Groenewald", "Danika Groenewald & Anlea Groenewald"]
+      "guests": ["Oupa Groenewald & Tannie Alida"]
     },
     {
       "name": "Farmhouse 2",
@@ -43,36 +43,36 @@
     {
       "name": "Farmhouse 3",
       "description": "Ruim hoofslaapkamer langs die tweede sitkamer, met opsie van en-suite badkamer (met bad)",
-      "guests": ["Lindie Vosloo & Sean Vosloo", "Vosloo Kinders"]
+      "guests": ["Zimone Groenewald & Reino Groenewald", "Danika Groenewald & Anlea Groenewald"]
     },
     {
       "name": "Farmhouse 4",
       "description": "Groot slaapkamer langs die gang",
-      "guests": ["Shanel Putz & Jurgen Putz", "Putz Kinders (Kot & Lounge)", "Mika Groenewald & Darius Groenewald (Lounge)", "Louise Groenewald & Gustav Groenewald"]
+      "guests": ["Louise Groenewald & Gustav Groenewald","Mika Groenewald & Darius Groenewald (Lounge)"]
     },
     {
       "name": "Farmhouse 5",
       "description": "Hoekslaapkamer langs die voorstoep buite",
-      "guests": ["Nelie Groenewald & Chris Groenewald", "Jaco Groenewald & Chris Groenewald"]
+      "guests": ["Mandie Potgieter & Christiaan Potgieter"]
     },
     {
       "name": "Farmhouse 6",
       "description": "Syslaapkamer langs die voorstoep buite",
-      "guests": ["Gerhard Beeslaar & Jana Beeslaar", "Tyrone Kriek"]
+      "guests": ["Prelisha Nadesan & Previn Naidoo", "Tyrone Kriek"]
     },
     {
       "name": "Gardenflat 7",
       "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
-      "guests": ["Mandie Potgieter & Christiaan Potgieter"]
+      "guests": ["Wessel Pretorius", "Gernot Schaaf"]
     },
     {
       "name": "Gardenflat 8",
       "description": "Gesellige hoofslaapkamer onder die stoep, tuinwoonstel deel 'n badkamer",
-      "guests": ["Oupa Groenewald & Alida"]
+      "guests": ["DJ & Metgesel"]
     },
     {
       "name": "Garden Flat \u2013 Sitkamer-area",
-      "description": "Ruim sitkamer-area onder die stoep, tuinwoonstel deel 'n badkamer. Opsie vir tieners, familie van 5, enkellopend of selfs personeel",
+      "description": "Ruim sitkamer-area onder die stoep, tuinwoonstel deel 'n badkamer.",
       "guests": ["Mattieu Bettings", "Bennie Buys", "Regard Groenewald", "JJ Venter", "Janco Malan"]
     },
     {
@@ -83,12 +83,12 @@
     {
       "name": "AfriCamp 2",
       "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
-      "guests": ["Maroelien Joubert & Francios Joubert", "Mienke Schaaf & Gernot Schaaf", "Hein Schaaf"]
+      "guests": ["Maroelien Joubert & Francios Joubert", "Mac van der Merwe & Rochelle Coetzee"]
     },
     {
       "name": "AfriCamp 3",
       "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
-      "guests": ["Kayla Pretorius & Wessel Pretorius", "Daniella Bezuidenhout & JP Bezuidenhout"]
+      "guests": ["Chene Havenga & Ben-Franco Havenga", "Ane Smith & Erik Potgieter"]
     },
     {
       "name": "AfriCamp 4",
@@ -98,7 +98,7 @@
     {
       "name": "AfriCamp 5",
       "description": "Ruim safaritent, 2 slaapkamers, badkamer met stortbad, lugversorging, kaggel, kombuisie, dekke met braai & Jacuzzi",
-      "guests": ["Chene Havenga & Ben-Franco Havenga", "Monique De Wet & Jaco De Wet"]
+      "guests": [ "Monique De Wet & Jaco De Wet","De Wet Kinders"]
     },
     {
       "name": "AfriCamp 6",
